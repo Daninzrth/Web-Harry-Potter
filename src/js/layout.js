@@ -5,10 +5,12 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import { Descriptions } from "./views/descriptions";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { DescriptionsHouses } from "./views/descriptionsHouses";
 
 //create your first component
 const Layout = () => {
@@ -30,6 +32,12 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
+						</Route>
+						<Route exact path="/characters/:name">
+							<Descriptions />
+						</Route>
+						<Route exact path="/houses/:name">
+							<DescriptionsHouses />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
